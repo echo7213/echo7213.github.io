@@ -1,0 +1,1341 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安安老师记bilibili - 官方视频门户 | 教育创作者内容社区</title>
+<meta name="description" content="安安老师记bilibili官方网站，专注于教育内容创作的视频品牌门户，汇聚原创精品课程、创作者故事与社区互动，为用户提供高清专业的教育视频内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b4a7a'/%3E%3Cpath d='M20 26h24v18H20z' fill='%23f5c451'/%3E%3Ccircle cx='26' cy='20' r='4' fill='%23fff'/%3E%3Ccircle cx='38' cy='20' r='4' fill='%23fff'/%3E%3Cpath d='M27 34l10 5-10 5z' fill='%232b4a7a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --at-navy:#243b63;
+  --at-navy-deep:#182a49;
+  --at-blue:#3d6bb3;
+  --at-blue-soft:#e8eef8;
+  --at-amber:#e8a83a;
+  --at-amber-soft:#fdf3df;
+  --at-ink:#1d2635;
+  --at-muted:#5d6b80;
+  --at-line:#dde4ef;
+  --at-bg:#f6f8fc;
+  --at-white:#ffffff;
+  --at-radius:16px;
+  --at-shadow:0 8px 30px rgba(36,59,99,.08);
+  --at-shadow-hover:0 14px 40px rgba(36,59,99,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--at-bg);
+  color:var(--at-ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+.at-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* ===== 吸顶区：公告条 + 页头 ===== */
+.at-sticky-top{position:sticky;top:0;z-index:90}
+.at-announce{
+  background:linear-gradient(90deg,var(--at-navy-deep),var(--at-blue));
+  color:#fff;font-size:13.5px;
+  padding:8px 0;
+}
+.at-announce .at-wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.at-announce-badge{
+  background:var(--at-amber);color:var(--at-navy-deep);
+  font-weight:700;font-size:11.5px;padding:2px 9px;border-radius:999px;
+  letter-spacing:.06em;white-space:nowrap;
+}
+.at-announce-track{display:flex;align-items:center;gap:10px;flex:1;min-width:0;overflow:hidden}
+.at-announce-item{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.95}
+.at-announce-dot{width:5px;height:5px;border-radius:50%;background:var(--at-amber);flex:none}
+.at-announce-link{color:var(--at-amber);font-weight:600;white-space:nowrap;border-bottom:1px dashed rgba(232,168,58,.6)}
+.at-header{background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--at-line);box-shadow:0 2px 14px rgba(36,59,99,.05)}
+.at-header-inner{display:flex;align-items:center;gap:22px;height:66px}
+.at-logo{display:flex;align-items:center;gap:10px;flex:none}
+.at-logo-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(140deg,var(--at-navy),var(--at-blue));display:grid;place-items:center;color:#fff;font-weight:800;font-size:16px;letter-spacing:.02em}
+.at-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.at-logo-name{font-weight:800;font-size:16.5px;color:var(--at-navy);letter-spacing:.01em}
+.at-logo-sub{font-size:10.5px;color:var(--at-muted);letter-spacing:.18em}
+.at-nav{display:flex;gap:4px;flex:1;min-width:0}
+.at-nav a{padding:8px 13px;border-radius:9px;font-size:14.5px;color:#39465c;font-weight:500;transition:.2s}
+.at-nav a:hover{background:var(--at-blue-soft);color:var(--at-navy)}
+.at-head-tools{display:flex;align-items:center;gap:10px;flex:none}
+.at-search{position:relative;display:flex;align-items:center;background:var(--at-bg);border:1px solid var(--at-line);border-radius:999px;padding:5px 6px 5px 14px;transition:.2s}
+.at-search:focus-within{border-color:var(--at-blue);box-shadow:0 0 0 3px rgba(61,107,179,.13);background:#fff}
+.at-search input{border:none;outline:none;background:transparent;width:150px;font-size:13.5px;color:var(--at-ink)}
+.at-search input::placeholder{color:#93a1b6}
+.at-search button{background:var(--at-navy);color:#fff;border-radius:999px;padding:5px 13px;font-size:13px;font-weight:600;transition:.2s}
+.at-search button:hover{background:var(--at-blue)}
+.at-btn-primary{background:var(--at-navy);color:#fff;padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;transition:.2s;white-space:nowrap}
+.at-btn-primary:hover{background:var(--at-blue);transform:translateY(-1px)}
+.at-btn-ghost{border:1.5px solid var(--at-navy);color:var(--at-navy);padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;transition:.2s;white-space:nowrap}
+.at-btn-ghost:hover{background:var(--at-navy);color:#fff}
+.at-burger{display:none;width:40px;height:40px;border-radius:10px;background:var(--at-blue-soft);align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.at-burger span{display:block;width:18px;height:2px;background:var(--at-navy);border-radius:2px;transition:.25s}
+.at-burger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.at-burger.is-open span:nth-child(2){opacity:0}
+.at-burger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.at-mobile-nav{display:none;border-top:1px solid var(--at-line);background:#fff}
+.at-mobile-nav a{display:block;padding:13px 22px;border-bottom:1px solid var(--at-bg);font-size:15px;color:#39465c}
+.at-mobile-nav.is-open{display:block}
+.at-search-feedback{
+  display:none;max-width:1180px;margin:0 auto;padding:0 22px 10px;
+  font-size:13px;color:var(--at-blue);font-weight:600;
+}
+.at-search-feedback.is-visible{display:block}
+
+/* ===== 首屏 ===== */
+.at-hero{background:linear-gradient(165deg,#eef3fb 0%,#f7f9fd 55%,#fff 100%);padding:52px 0 60px;position:relative;overflow:hidden}
+.at-hero::after{content:"";position:absolute;right:-130px;top:-90px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(232,168,58,.16),transparent 68%)}
+.at-hero-grid{display:grid;grid-template-columns:6fr 4fr;gap:48px;align-items:center;position:relative;z-index:1}
+.at-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--at-line);border-radius:999px;padding:6px 15px;font-size:12.5px;font-weight:600;color:var(--at-navy);letter-spacing:.05em;box-shadow:0 3px 12px rgba(36,59,99,.06)}
+.at-hero-eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--at-amber);display:block}
+h1.at-hero-title{font-size:clamp(30px,4.2vw,50px);line-height:1.22;color:var(--at-navy-deep);font-weight:800;margin:18px 0 16px;letter-spacing:-.01em}
+.at-hero-title em{font-style:normal;color:var(--at-blue);position:relative;white-space:nowrap}
+.at-hero-title em::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:9px;background:rgba(232,168,58,.35);border-radius:4px;z-index:-1}
+.at-hero-lead{font-size:16.5px;color:#3a4a63;max-width:520px;margin-bottom:14px}
+.at-hero-about{font-size:14.5px;color:var(--at-muted);max-width:560px;margin-bottom:26px;line-height:1.85}
+.at-hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.at-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:520px}
+.at-stat{background:#fff;border:1px solid var(--at-line);border-radius:13px;padding:13px 15px;box-shadow:0 4px 16px rgba(36,59,99,.05)}
+.at-stat b{display:block;font-size:21px;color:var(--at-navy);line-height:1.2;font-weight:800}
+.at-stat span{font-size:12px;color:var(--at-muted)}
+.at-hero-visual{position:relative}
+.at-hero-visual img{border-radius:22px;box-shadow:0 22px 60px rgba(36,59,99,.22);width:100%;aspect-ratio:4/5;object-fit:cover}
+.at-hero-float{position:absolute;left:-18px;bottom:26px;background:#fff;border-radius:14px;padding:11px 16px;box-shadow:0 12px 34px rgba(36,59,99,.18);display:flex;align-items:center;gap:11px;max-width:250px}
+.at-hero-float-mark{width:36px;height:36px;border-radius:10px;background:var(--at-amber-soft);color:#a5741a;display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
+.at-hero-float p{font-size:12px;color:var(--at-muted);line-height:1.4}
+.at-hero-float b{display:block;font-size:13.5px;color:var(--at-navy)}
+
+/* ===== 通用 section ===== */
+.at-section{padding:62px 0}
+.at-section-alt{background:#fff}
+.at-sec-head{max-width:760px;margin-bottom:34px}
+.at-kicker{font-size:12.5px;letter-spacing:.22em;color:var(--at-blue);font-weight:700;text-transform:uppercase;margin-bottom:9px}
+h2.at-sec-title{font-size:clamp(23px,2.9vw,31px);color:var(--at-navy-deep);font-weight:800;line-height:1.28;letter-spacing:-.01em}
+.at-sec-desc{color:var(--at-muted);font-size:14.8px;margin-top:11px;max-width:680px}
+h3{color:var(--at-navy);font-size:17.5px;font-weight:700;line-height:1.45;margin-bottom:8px}
+
+/* ===== 深度解析 ===== */
+.at-about-grid{display:grid;grid-template-columns:7fr 5fr;gap:44px;align-items:start}
+.at-about-body p{font-size:15.2px;color:#3a4a63;margin-bottom:15px}
+.at-about-body h3{margin-top:26px}
+.at-about-aside{background:#fff;border:1px solid var(--at-line);border-radius:var(--at-radius);padding:26px;box-shadow:var(--at-shadow);position:sticky;top:150px}
+.at-about-aside h3{margin-bottom:14px}
+.at-facts{display:flex;flex-direction:column;gap:13px}
+.at-fact{display:flex;gap:12px;align-items:flex-start;padding-bottom:13px;border-bottom:1px dashed var(--at-line)}
+.at-fact:last-child{border-bottom:none;padding-bottom:0}
+.at-fact-ico{width:32px;height:32px;border-radius:9px;background:var(--at-blue-soft);color:var(--at-blue);display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+.at-fact p{font-size:13.2px;color:var(--at-muted);line-height:1.6}
+.at-fact b{display:block;color:var(--at-navy);font-size:14px;margin-bottom:1px}
+
+/* ===== 视频列表 ===== */
+.at-video-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;background:#fff;border:1px solid var(--at-line);border-radius:20px;overflow:hidden;box-shadow:var(--at-shadow);margin-bottom:26px}
+.at-video-feature-img img{height:100%;width:100%;aspect-ratio:16/10;object-fit:cover}
+.at-video-feature-body{padding:26px 30px}
+.at-chip{display:inline-block;background:var(--at-amber-soft);color:#9a6c12;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;letter-spacing:.04em}
+.at-video-feature-body h3{font-size:20px}
+.at-video-feature-body p{font-size:14px;color:var(--at-muted);margin-bottom:14px}
+.at-meta-row{display:flex;flex-wrap:wrap;gap:14px;font-size:12.8px;color:var(--at-muted);margin-bottom:16px}
+.at-meta-row b{color:var(--at-navy);font-weight:700}
+.at-actions{display:flex;gap:9px;flex-wrap:wrap}
+.at-act{border:1px solid var(--at-line);background:#fff;border-radius:999px;padding:6px 14px;font-size:12.8px;font-weight:600;color:var(--at-navy);transition:.2s}
+.at-act:hover{border-color:var(--at-blue);color:var(--at-blue);background:var(--at-blue-soft)}
+.at-act.is-liked{background:var(--at-blue);border-color:var(--at-blue);color:#fff}
+.at-act.is-saved{background:var(--at-amber);border-color:var(--at-amber);color:#4a3306}
+.at-video-list{display:flex;flex-direction:column;gap:14px}
+.at-video-item{display:grid;grid-template-columns:76px minmax(0,1fr) auto;gap:16px;align-items:center;background:#fff;border:1px solid var(--at-line);border-radius:14px;padding:14px 18px;transition:.22s}
+.at-video-item:hover{transform:translateX(4px);border-color:var(--at-blue);box-shadow:var(--at-shadow-hover)}
+.at-video-num{font-size:26px;font-weight:800;color:var(--at-blue-soft);text-align:center;line-height:1;letter-spacing:-.03em}
+.at-video-item:hover .at-video-num{color:var(--at-amber)}
+.at-video-item-body h3{font-size:15.8px;margin-bottom:4px}
+.at-video-item-body p{font-size:13.2px;color:var(--at-muted);margin-bottom:7px}
+.at-video-tags{display:flex;gap:7px;flex-wrap:wrap}
+.at-tag{font-size:11.5px;color:var(--at-blue);background:var(--at-blue-soft);padding:2px 9px;border-radius:999px;font-weight:600}
+.at-video-item-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px;font-size:12.2px;color:var(--at-muted);white-space:nowrap}
+
+/* ===== 专题 ===== */
+.at-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.at-topic-card{background:#fff;border:1px solid var(--at-line);border-radius:var(--at-radius);overflow:hidden;box-shadow:var(--at-shadow);transition:.24s;display:flex;flex-direction:column}
+.at-topic-card:hover{transform:translateY(-4px);box-shadow:var(--at-shadow-hover)}
+.at-topic-card img{width:100%;aspect-ratio:16/8;object-fit:cover}
+.at-topic-body{padding:22px 24px 24px}
+.at-topic-status{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:9px}
+.at-st-live{background:#e4f6ec;color:#137a45}
+.at-st-soon{background:var(--at-amber-soft);color:#9a6c12}
+.at-topic-body p{font-size:13.8px;color:var(--at-muted);margin-bottom:13px}
+.at-topic-list{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.at-topic-list li{font-size:13.4px;color:#3a4a63;padding-left:16px;position:relative}
+.at-topic-list li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:2px;background:var(--at-amber)}
+
+/* ===== 作者矩阵：双列简介 ===== */
+.at-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.at-author-card{display:flex;gap:16px;background:#fff;border:1px solid var(--at-line);border-radius:var(--at-radius);padding:20px;transition:.22s}
+.at-author-card:hover{border-color:var(--at-blue);box-shadow:var(--at-shadow-hover)}
+.at-avatar{width:58px;height:58px;border-radius:16px;flex:none;display:grid;place-items:center;font-weight:800;font-size:20px;color:#fff;letter-spacing:.02em}
+.at-author-body{min-width:0}
+.at-author-body h3{font-size:16px;margin-bottom:2px}
+.at-author-field{font-size:12.2px;color:var(--at-blue);font-weight:700;margin-bottom:7px;letter-spacing:.04em}
+.at-author-body p{font-size:13px;color:var(--at-muted);line-height:1.68;margin-bottom:9px}
+.at-author-nums{display:flex;gap:14px;font-size:12px;color:var(--at-muted)}
+.at-author-nums b{color:var(--at-navy)}
+.at-author-more{font-size:12.4px;font-weight:700;color:var(--at-blue);margin-top:8px;display:inline-block}
+.at-author-more:hover{text-decoration:underline}
+
+/* ===== 排行榜 ===== */
+.at-rank-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.at-rank-col{background:#fff;border:1px solid var(--at-line);border-radius:var(--at-radius);padding:22px;box-shadow:var(--at-shadow)}
+.at-rank-col h3{font-size:15.5px;padding-bottom:12px;border-bottom:2px solid var(--at-blue-soft);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.at-rank-col h3 .at-rank-dot{width:8px;height:8px;border-radius:50%;background:var(--at-amber);display:block}
+.at-rank-item{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed var(--at-line)}
+.at-rank-item:last-child{border-bottom:none}
+.at-rank-no{width:22px;height:22px;border-radius:6px;background:var(--at-bg);color:var(--at-muted);font-size:12px;font-weight:800;display:grid;place-items:center;flex:none;margin-top:2px}
+.at-rank-item:first-of-type .at-rank-no{background:var(--at-navy);color:#fff}
+.at-rank-item:nth-of-type(2) .at-rank-no{background:var(--at-blue);color:#fff}
+.at-rank-item:nth-of-type(3) .at-rank-no{background:var(--at-amber);color:#4a3306}
+.at-rank-info{min-width:0}
+.at-rank-info h4{font-size:13.6px;font-weight:700;color:var(--at-navy);line-height:1.4;margin-bottom:2px}
+.at-rank-info p{font-size:12px;color:var(--at-muted)}
+
+/* ===== 评论区：评分摘要 + 双列短评 ===== */
+.at-review-summary{display:grid;grid-template-columns:220px minmax(0,1fr);gap:30px;background:#fff;border:1px solid var(--at-line);border-radius:var(--at-radius);padding:26px;margin-bottom:24px;box-shadow:var(--at-shadow)}
+.at-score-big{text-align:center;border-right:1px solid var(--at-line);padding-right:24px}
+.at-score-big b{font-size:48px;color:var(--at-navy);line-height:1;font-weight:800;letter-spacing:-.03em}
+.at-score-big span{display:block;font-size:13px;color:var(--at-muted);margin-top:6px}
+.at-stars{color:var(--at-amber);font-size:17px;letter-spacing:3px;margin-top:8px}
+.at-score-bars{display:flex;flex-direction:column;gap:9px;justify-content:center}
+.at-score-row{display:grid;grid-template-columns:44px minmax(0,1fr) 40px;gap:10px;align-items:center;font-size:12.5px;color:var(--at-muted)}
+.at-bar{height:7px;border-radius:99px;background:var(--at-bg);overflow:hidden}
+.at-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--at-blue),var(--at-navy))}
+.at-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.at-review-card{background:#fff;border:1px solid var(--at-line);border-radius:14px;padding:18px 20px;transition:.2s}
+.at-review-card:hover{border-color:var(--at-blue)}
+.at-review-head{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.at-review-avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:800;color:#fff;flex:none}
+.at-review-name{font-size:13.6px;font-weight:700;color:var(--at-navy)}
+.at-review-stars{margin-left:auto;color:var(--at-amber);font-size:12px;letter-spacing:1px}
+.at-review-card p{font-size:13.4px;color:#465468;line-height:1.7}
+.at-review-date{font-size:11.5px;color:#93a1b6;margin-top:8px}
+
+/* ===== 企业动态 ===== */
+.at-news-list{display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--at-line);border-radius:var(--at-radius);overflow:hidden}
+.at-news-item{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;padding:19px 24px;border-bottom:1px solid var(--at-bg);transition:.2s}
+.at-news-item:last-child{border-bottom:none}
+.at-news-item:hover{background:var(--at-bg)}
+.at-news-date{font-size:12.8px;color:var(--at-muted);font-weight:600;letter-spacing:.03em}
+.at-news-item h3{font-size:15px;margin-bottom:3px}
+.at-news-item p{font-size:13.3px;color:var(--at-muted)}
+
+/* ===== 合作墙 ===== */
+.at-partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.at-partner{background:#fff;border:1px solid var(--at-line);border-radius:13px;padding:20px 16px;text-align:center;transition:.22s}
+.at-partner:hover{border-color:var(--at-blue);transform:translateY(-3px);box-shadow:var(--at-shadow)}
+.at-partner-mark{width:44px;height:44px;border-radius:12px;margin:0 auto 10px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:16px}
+.at-partner b{font-size:13.6px;color:var(--at-navy);display:block}
+.at-partner span{font-size:11.8px;color:var(--at-muted)}
+
+/* ===== FAQ ===== */
+.at-faq-list{display:flex;flex-direction:column;gap:11px;max-width:900px}
+.at-faq-item{background:#fff;border:1px solid var(--at-line);border-radius:13px;overflow:hidden;transition:.2s}
+.at-faq-item[open]{border-color:var(--at-blue);box-shadow:var(--at-shadow)}
+.at-faq-item summary{list-style:none;cursor:pointer;padding:16px 22px;font-size:15px;font-weight:700;color:var(--at-navy);display:flex;align-items:center;gap:12px}
+.at-faq-item summary::-webkit-details-marker{display:none}
+.at-faq-item summary::before{content:"+";width:22px;height:22px;border-radius:6px;background:var(--at-blue-soft);color:var(--at-blue);display:grid;place-items:center;font-size:15px;font-weight:800;flex:none;transition:.2s}
+.at-faq-item[open] summary::before{content:"−";background:var(--at-navy);color:#fff}
+.at-faq-item p{padding:0 22px 18px 56px;font-size:14px;color:var(--at-muted)}
+
+/* ===== 联系投稿 ===== */
+.at-contact-band{background:linear-gradient(135deg,var(--at-navy),var(--at-blue));border-radius:22px;padding:40px 42px;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;box-shadow:0 20px 50px rgba(36,59,99,.2)}
+.at-contact-band h2{color:#fff;font-size:clamp(21px,2.6vw,28px);margin-bottom:9px}
+.at-contact-band p{font-size:14.2px;color:rgba(255,255,255,.82);max-width:560px}
+.at-contact-cta{display:flex;gap:11px;flex-wrap:wrap}
+.at-btn-light{background:#fff;color:var(--at-navy);padding:11px 24px;border-radius:999px;font-size:14px;font-weight:700;transition:.2s;white-space:nowrap}
+.at-btn-light:hover{background:var(--at-amber);color:#3a2705}
+.at-btn-outline{border:1.5px solid rgba(255,255,255,.55);color:#fff;padding:10px 22px;border-radius:999px;font-size:14px;font-weight:600;transition:.2s;white-space:nowrap}
+.at-btn-outline:hover{background:rgba(255,255,255,.15);border-color:#fff}
+
+/* ===== 页脚 ===== */
+.at-footer{background:var(--at-navy-deep);color:#c9d4e6;padding:52px 0 0;margin-top:20px}
+.at-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px;padding-bottom:38px}
+.at-footer-brand .at-logo-name{color:#fff}
+.at-footer-brand .at-logo-sub{color:#8fa4c4}
+.at-footer-brand p{font-size:13px;color:#8fa4c4;margin-top:14px;line-height:1.8;max-width:320px}
+.at-footer h4{color:#fff;font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.04em}
+.at-footer ul li{margin-bottom:9px}
+.at-footer ul a{font-size:13.2px;color:#a9b8d1;transition:.2s}
+.at-footer ul a:hover{color:var(--at-amber)}
+.at-footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.4px;color:#8094b5}
+.at-footer-bottom span{display:inline-block}
+
+/* ===== 回到顶部 ===== */
+.at-top-btn{position:fixed;right:24px;bottom:28px;width:46px;height:46px;border-radius:14px;background:var(--at-navy);color:#fff;display:grid;place-items:center;box-shadow:0 10px 28px rgba(36,59,99,.32);opacity:0;visibility:hidden;transform:translateY(12px);transition:.28s;z-index:80;font-size:17px}
+.at-top-btn.is-show{opacity:1;visibility:visible;transform:translateY(0)}
+.at-top-btn:hover{background:var(--at-blue)}
+
+/* ===== Toast / 弹窗 ===== */
+.at-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:var(--at-navy-deep);color:#fff;padding:11px 22px;border-radius:999px;font-size:13.5px;font-weight:600;opacity:0;visibility:hidden;transition:.28s;z-index:120;box-shadow:0 12px 32px rgba(0,0,0,.28);max-width:88vw;text-align:center}
+.at-toast.is-show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.at-modal-mask{position:fixed;inset:0;background:rgba(18,28,46,.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:20px;z-index:110}
+.at-modal-mask.is-open{display:flex}
+.at-modal{background:#fff;border-radius:18px;max-width:520px;width:100%;padding:28px 30px;box-shadow:0 30px 70px rgba(0,0,0,.3);max-height:86vh;overflow:auto}
+.at-modal h3{font-size:19px;margin-bottom:6px}
+.at-modal p{font-size:14px;color:var(--at-muted);margin-bottom:16px}
+.at-modal-close{float:right;width:30px;height:30px;border-radius:8px;background:var(--at-bg);color:var(--at-muted);font-size:16px;display:grid;place-items:center;margin:-6px -8px 0 0}
+.at-modal-close:hover{background:var(--at-line);color:var(--at-navy)}
+.at-form-row{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
+.at-form-row label{font-size:12.8px;font-weight:700;color:var(--at-navy)}
+.at-form-row input,.at-form-row textarea{width:100%;border:1px solid var(--at-line);border-radius:10px;padding:10px 13px;font-size:13.6px;font-family:inherit;outline:none;transition:.2s;background:var(--at-bg);color:var(--at-ink)}
+.at-form-row textarea{min-height:90px;resize:vertical}
+.at-form-row input:focus,.at-form-row textarea:focus{border-color:var(--at-blue);background:#fff;box-shadow:0 0 0 3px rgba(61,107,179,.13)}
+.at-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.at-share-chip{border:1px solid var(--at-line);border-radius:999px;padding:8px 18px;font-size:13.4px;font-weight:600;color:var(--at-navy);transition:.2s}
+.at-share-chip:hover{background:var(--at-blue);color:#fff;border-color:var(--at-blue)}
+
+/* ===== 响应式 ===== */
+@media (max-width:980px){
+  .at-hero-grid{grid-template-columns:1fr;gap:32px}
+  .at-hero-visual img{aspect-ratio:16/10}
+  .at-about-grid{grid-template-columns:1fr;gap:30px}
+  .at-about-aside{position:static}
+  .at-video-feature{grid-template-columns:1fr}
+  .at-rank-grid{grid-template-columns:1fr}
+  .at-topic-grid{grid-template-columns:1fr}
+  .at-review-summary{grid-template-columns:1fr;gap:18px}
+  .at-score-big{border-right:none;border-bottom:1px solid var(--at-line);padding:0 0 18px}
+  .at-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .at-footer-grid{grid-template-columns:1fr 1fr}
+  .at-contact-band{grid-template-columns:1fr;padding:30px 26px}
+  .at-nav{display:none}
+  .at-search{display:none}
+  .at-burger{display:flex}
+}
+@media (max-width:680px){
+  .at-header-inner{height:60px;gap:12px}
+  .at-hero{padding:34px 0 44px}
+  .at-hero-stats{grid-template-columns:1fr;}
+  .at-stat{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+  .at-stat b{font-size:19px}
+  .at-video-item{grid-template-columns:1fr;gap:8px}
+  .at-video-item-meta{flex-direction:row;align-items:center;gap:12px;flex-wrap:wrap}
+  .at-video-num{display:none}
+  .at-author-grid,.at-review-grid{grid-template-columns:1fr}
+  .at-news-item{grid-template-columns:1fr;gap:6px}
+  .at-footer-grid{grid-template-columns:1fr;gap:24px}
+  .at-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .at-sec-head{margin-bottom:24px}
+  .at-section{padding:46px 0}
+  .at-hero-float{left:10px;bottom:12px}
+  .at-top-btn{right:14px;bottom:16px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶区 S1 -->
+<div class="at-sticky-top">
+  <div class="at-announce">
+    <div class="at-wrap">
+      <span class="at-announce-badge">官方发布</span>
+      <div class="at-announce-track">
+        <span class="at-announce-dot"></span>
+        <span class="at-announce-item">冬季新课《课堂节奏设计十二讲》11月25日上线，首批包含6支高清正片</span>
+        <span class="at-announce-dot"></span>
+        <span class="at-announce-item">创作者扶持计划第三期报名开放，本期新增20个推荐位</span>
+      </div>
+      <a class="at-announce-link" href="#at-news">查看全部动态</a>
+    </div>
+  </div>
+  <header class="at-header">
+    <div class="at-wrap at-header-inner">
+      <a class="at-logo" href="#at-top">
+        <span class="at-logo-mark">安</span>
+        <span class="at-logo-text">
+          <span class="at-logo-name">安安老师记bilibili</span>
+          <span class="at-logo-sub">OFFICIAL VIDEO</span>
+        </span>
+      </a>
+      <nav class="at-nav" aria-label="主导航">
+        <a href="#at-about">品牌解析</a>
+        <a href="#at-videos">精品内容</a>
+        <a href="#at-topics">专题企划</a>
+        <a href="#at-authors">创作者</a>
+        <a href="#at-rank">口碑榜单</a>
+        <a href="#at-news">企业动态</a>
+        <a href="#at-faq">帮助中心</a>
+      </nav>
+      <div class="at-head-tools">
+        <div class="at-search">
+          <input id="at-search-input" type="search" placeholder="搜索课程 / 创作者" aria-label="站内搜索">
+          <button id="at-search-btn" type="button">搜索</button>
+        </div>
+        <button class="at-btn-primary" id="at-submit-open" type="button">我要投稿</button>
+        <button class="at-burger" id="at-burger" type="button" aria-label="展开导航" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="at-mobile-nav" id="at-mobile-nav">
+      <a href="#at-about">品牌解析</a>
+      <a href="#at-videos">精品内容</a>
+      <a href="#at-topics">专题企划</a>
+      <a href="#at-authors">创作者</a>
+      <a href="#at-rank">口碑榜单</a>
+      <a href="#at-news">企业动态</a>
+      <a href="#at-faq">帮助中心</a>
+    </div>
+  </header>
+  <div class="at-search-feedback" id="at-search-feedback"></div>
+</div>
+
+<main id="at-top">
+
+  <!-- 首屏 S2 -->
+  <section class="at-hero" aria-labelledby="at-hero-heading">
+    <div class="at-wrap at-hero-grid">
+      <div class="at-hero-copy">
+        <span class="at-hero-eyebrow"><i></i>教育内容创作 · 官方网站</span>
+        <h1 class="at-hero-title" id="at-hero-heading">安安老师记bilibili</h1>
+        <p class="at-hero-lead">把课堂里的方法与温度，做成经得起反复观看的视频内容。这里是安安老师记bilibili官方视频品牌门户。</p>
+        <p class="at-hero-about">作为深耕教育内容领域的原创视频品牌，安安老师记bilibili官方网站致力于为教师、家长与终身学习者搭建高品质内容生态。我们坚持正版原创、高清制作与专业教研，以真实课堂记录、教学经验分享和行业观察为核心，持续运营一个值得信赖的学习者社区，让每一次观看都成为可迁移的成长力量。</p>
+        <div class="at-hero-cta">
+          <a class="at-btn-primary" href="#at-videos">观看精品内容</a>
+          <a class="at-btn-ghost" href="#at-authors">认识创作者</a>
+          <button class="at-btn-ghost" id="at-share-open" type="button">分享官网</button>
+        </div>
+        <div class="at-hero-stats">
+          <div class="at-stat"><b>1,280+</b><span>原创视频作品</span></div>
+          <div class="at-stat"><b>46.5万</b><span>社区关注用户</span></div>
+          <div class="at-stat"><b>4.9 / 5</b><span>用户口碑评分</span></div>
+        </div>
+      </div>
+      <div class="at-hero-visual">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 800'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23243b63'/%3E%3Cstop offset='1' stop-color='%233d6bb3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='800' fill='url(%23bg)'/%3E%3Ccircle cx='520' cy='120' r='150' fill='%23e8a83a' opacity='.22'/%3E%3Ccircle cx='90' cy='700' r='180' fill='%23ffffff' opacity='.06'/%3E%3Crect x='70' y='150' width='500' height='330' rx='18' fill='%23f6f8fc' opacity='.95'/%3E%3Crect x='70' y='150' width='500' height='46' rx='18' fill='%23e8eef8'/%3E%3Ccircle cx='100' cy='173' r='7' fill='%23e8a83a'/%3E%3Ccircle cx='122' cy='173' r='7' fill='%233d6bb3'/%3E%3Ccircle cx='144' cy='173' r='7' fill='%23243b63'/%3E%3Crect x='110' y='228' width='250' height='16' rx='8' fill='%23243b63' opacity='.85'/%3E%3Crect x='110' y='258' width='390' height='10' rx='5' fill='%23a9b8d1'/%3E%3Crect x='110' y='280' width='340' height='10' rx='5' fill='%23c3cee0'/%3E%3Crect x='110' y='316' width='190' height='110' rx='10' fill='%23e8eef8'/%3E%3Cpath d='M185 355l40 20-40 20z' fill='%23243b63'/%3E%3Crect x='318' y='316' width='212' height='46' rx='8' fill='%23e8eef8'/%3E%3Crect x='318' y='376' width='212' height='46' rx='8' fill='%23e8eef8'/%3E%3Crect x='70' y='520' width='235' height='150' rx='14' fill='%23ffffff' opacity='.16'/%3E%3Crect x='335' y='520' width='235' height='150' rx='14' fill='%23ffffff' opacity='.16'/%3E%3Ccircle cx='120' cy='570' r='22' fill='%23e8a83a'/%3E%3Crect x='158' y='556' width='100' height='11' rx='5' fill='%23ffffff' opacity='.8'/%3E%3Crect x='158' y='576' width='70' height='8' rx='4' fill='%23ffffff' opacity='.45'/%3E%3Ccircle cx='385' cy='570' r='22' fill='%23ffffff' opacity='.7'/%3E%3Crect x='423' y='556' width='100' height='11' rx='5' fill='%23ffffff' opacity='.8'/%3E%3Crect x='423' y='576' width='70' height='8' rx='4' fill='%23ffffff' opacity='.45'/%3E%3Crect x='110' y='620' width='150' height='9' rx='4' fill='%23ffffff' opacity='.5'/%3E%3Crect x='375' y='620' width='150' height='9' rx='4' fill='%23ffffff' opacity='.5'/%3E%3C/svg%3E" alt="安安老师记bilibili品牌主视觉中的课堂视频界面与学习画面">
+        <div class="at-hero-float">
+          <span class="at-hero-float-mark">播</span>
+          <p><b>本周更新 4 支正片</b>冬季新课同步上线官网</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S8 深度解析 / 品牌故事 M15 -->
+  <section class="at-section at-section-alt" id="at-about" aria-labelledby="at-about-title">
+    <div class="at-wrap">
+      <div class="at-sec-head">
+        <p class="at-kicker">Brand Insight</p>
+        <h2 class="at-sec-title" id="at-about-title">关于安安老师记bilibili：一个教育视频品牌的成长路径</h2>
+        <p class="at-sec-desc">从一间普通教室到覆盖数十万学习者的内容社区，我们把镜头对准教育现场，也把方法论沉淀成可复用的影像档案。</p>
+      </div>
+      <div class="at-about-grid">
+        <div class="at-about-body">
+          <h3>一、品牌起点：从课堂记录到内容体系</h3>
+          <p>安安老师记bilibili最初只是一个人、一台相机、一间教室的记录实验。2019年前后，安安老师开始把日常课堂中的关键片段剪成短小的视频，用来给因事请假的学生补看。没想到这些粗糙但真实的记录，逐渐被同校教师转发，又被更多家长收藏。品牌于是意识到：教育内容最稀缺的不是炫技，而是真实的现场感与可复用的方法。官网的建立，正是为了让这些散落的视频拥有稳定的归属，让内容从碎片走向体系。</p>
+          <p>如今的安安老师记bilibili官方网站，按照“课堂现场—方法拆解—经验复盘—行业观察”四条主线组织内容。我们坚持原创与正版，所有课程素材均获得授课者与出镜学生家长的授权；我们坚持高清与专业，从收音、机位到字幕校对都建立了标准流程；我们也坚持社区与品质，每一条评论、每一次投稿都会进入人工复核。这些看似笨拙的坚持，构成了品牌最朴素的底色。</p>
+
+          <h3>二、内容方法论：让每支视频都能被用起来</h3>
+          <p>我们常被问：同样是教学视频，安安老师记bilibili的区别在哪里？答案藏在内容生产的三个环节里。第一是选题前的“真实需求采集”，团队每月会整理来自教师群、家长留言与校园访谈的高频问题，再从中筛选出真正能落到课堂里的题目；第二是拍摄中的“双机位+原声”，主讲画面与板书画面同步录制，尽量保留课堂原有的呼吸感，避免过度表演化的呈现；第三是发布后的“可操作化改造”，每支正片都会配套文字步骤、常见误区与可下载的课堂素材清单，让观看不止于观看。</p>
+          <p>这套方法让我们在垂直领域里积累了口碑。以《课堂节奏设计十二讲》为例，其中一个关于“提问等待时间”的段落，最初只是一段八分钟的课堂实录，后来被拆成三支衍生短片、一份十二页的讲义和一份三十分钟的教研工作坊流程。很多老师在评论区说，他们不是看完就忘，而是第二天就能带进教室使用。这种“看完能用”的确定性，是我们理解的内容品质。</p>
+
+          <h3>三、社区与创作者：让内容生态自己生长</h3>
+          <p>安安老师记bilibili并不只是品牌的单口表达。官网的创作者矩阵中，有深耕班主任工作的同行，有专注家庭教育沟通的父母，也有偏技术流的多媒体教师。他们贡献的视角让品牌保持多元与包容：同一节公开课，有人关注提问结构，有人关注后排学生的注意力曲线，有人关注板书与PPT的分工。这些不同角度的内容在社区里彼此补充，形成了一个可以互相校验的内容生态。我们为创作者提供选题共创、拍摄协助与分发支持，也接受他们的批评与修正。</p>
+          <p>品牌故事里最动人的部分，往往来自社区的反馈。有老师把我们关于“错题本整理”的系列视频打印成册发给学生；有家长在深夜留言说终于理解了孩子为什么抗拒被当众点名；也有年轻教师在投稿后收到第一条评论时的截图，被我们收进了年度回顾的纪念墙。这些真实的连接，让“陪伴”不是一句口号，而是可以测量、可以追溯的日常。</p>
+
+          <h3>四、行业观察：教育内容的长期主义</h3>
+          <p>教育视频行业在近几年经历了从粗放到精细的转变。流量红利期结束后，真正留下的是那些愿意在教研上花时间、在制作上讲标准、在社区里守规矩的团队。安安老师记bilibili选择做一家“慢公司”：不追热点选题，不承诺速成效果，不把未经验证的方法包装成万能钥匙。我们更愿意把资源投入到长期资产上，比如持续更新的课堂案例库、可以反复引用的教研访谈、以及一个对新手友好的投稿通道。</p>
+          <p>面向未来，品牌会继续围绕“真实、专业、陪伴”三个关键词深耕垂直领域。官网将逐步开放课件下载、教研工作坊报名与创作者联名企划，也会把年度内容报告公开出来，接受同行与用户的检视。我们相信，一个值得信赖的教育视频品牌，靠的不是一次爆发，而是持续运营中不断被验证的细节。这是安安老师记bilibili官方网站对用户的承诺，也是企业对社会责任的理解。</p>
+        </div>
+        <aside class="at-about-aside">
+          <h3>品牌速览</h3>
+          <div class="at-facts">
+            <div class="at-fact">
+              <span class="at-fact-ico">创</span>
+              <p><b>创立时间</b>2019年，由一线教师发起，现为独立运营的教育视频品牌。</p>
+            </div>
+            <div class="at-fact">
+              <span class="at-fact-ico">域</span>
+              <p><b>垂直领域</b>课堂方法、家校沟通、教师成长与教育行业观察。</p>
+            </div>
+            <div class="at-fact">
+              <span class="at-fact-ico">制</span>
+              <p><b>制作标准</b>双机位原声录制、人工字幕校对、课件同步归档。</p>
+            </div>
+            <div class="at-fact">
+              <span class="at-fact-ico">社</span>
+              <p><b>社区规模</b>46.5万关注用户，签约与特邀创作者共38位。</p>
+            </div>
+            <div class="at-fact">
+              <span class="at-fact-ico">诺</span>
+              <p><b>四项承诺</b>原创正版、高清呈现、用户至上、持续更新。</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 视频内容 M2/M3 -->
+  <section class="at-section" id="at-videos" aria-labelledby="at-videos-title">
+    <div class="at-wrap">
+      <div class="at-sec-head">
+        <p class="at-kicker">Featured Content</p>
+        <h2 class="at-sec-title" id="at-videos-title">精品内容：在安安老师记bilibili官网看什么</h2>
+        <p class="at-sec-desc">重点推荐一支本期主推正片，其余按更新时间与口碑排列。所有内容均为官方发布的高清原创作品。</p>
+      </div>
+
+      <article class="at-video-feature">
+        <div class="at-video-feature-img">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23fdf3df'/%3E%3Cstop offset='1' stop-color='%23e8eef8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g1)'/%3E%3Crect x='60' y='60' width='420' height='300' rx='14' fill='%23ffffff'/%3E%3Crect x='60' y='60' width='420' height='40' rx='14' fill='%23243b63' opacity='.08'/%3E%3Ccircle cx='86' cy='80' r='6' fill='%23e8a83a'/%3E%3Ccircle cx='106' cy='80' r='6' fill='%233d6bb3'/%3E%3Crect x='88' y='124' width='200' height='13' rx='6' fill='%23243b63'/%3E%3Crect x='88' y='152' width='330' height='9' rx='4' fill='%23b6c3d8'/%3E%3Crect x='88' y='170' width='290' height='9' rx='4' fill='%23cdd7e6'/%3E%3Crect x='88' y='206' width='160' height='110' rx='8' fill='%23e8eef8'/%3E%3Cpath d='M155 240l34 18-34 18z' fill='%23243b63'/%3E%3Crect x='264' y='206' width='164' height='46' rx='7' fill='%23fdf3df'/%3E%3Crect x='264' y='266' width='164' height='50' rx='7' fill='%23e8eef8'/%3E%3Crect x='520' y='60' width='220' height='300' rx='14' fill='%23243b63'/%3E%3Ccircle cx='630' cy='150' r='52' fill='%23e8a83a' opacity='.85'/%3E%3Cpath d='M608 134l36 16-36 16z' fill='%23243b63'/%3E%3Crect x='552' y='232' width='156' height='10' rx='5' fill='%23ffffff' opacity='.75'/%3E%3Crect x='552' y='254' width='120' height='8' rx='4' fill='%23ffffff' opacity='.4'/%3E%3Crect x='552' y='288' width='70' height='26' rx='13' fill='%23ffffff' opacity='.22'/%3E%3Crect x='60' y='392' width='680' height='46' rx='10' fill='%23243b63' opacity='.07'/%3E%3Crect x='76' y='408' width='180' height='13' rx='6' fill='%23243b63' opacity='.5'/%3E%3C/svg%3E" alt="课堂节奏设计十二讲主推正片封面，包含课堂实录画面与讲者窗口">
+        </div>
+        <div class="at-video-feature-body">
+          <span class="at-chip">本期主推 · 官方发布</span>
+          <h3>课堂节奏设计十二讲 · 第一讲：四十五分钟里的呼吸感</h3>
+          <p>从一次真实的课堂实录出发，拆解开场三分钟、重难点转换与收尾复盘的时间分配逻辑。镜头保留了完整的课堂原声，方便对照自己的课堂节奏做同步观察。附赠十二页讲义与一份可打印的节奏观察表。</p>
+          <div class="at-meta-row">
+            <span>作者 <b>安安老师</b></span>
+            <span>播放 <b>128,400</b></span>
+            <span>点赞 <b id="at-feature-like">9,271</b></span>
+            <span>收藏 <b>6,512</b></span>
+            <span>时长 24:18</span>
+          </div>
+          <div class="at-actions">
+            <button class="at-act" data-like-btn data-like-target="at-feature-like" type="button">点赞</button>
+            <button class="at-act" data-save-btn type="button">收藏</button>
+            <button class="at-act" data-copy-btn type="button">复制链接</button>
+            <button class="at-act" data-open-modal="at-modal-report" type="button">反馈</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="at-video-list">
+        <article class="at-video-item">
+          <div class="at-video-num">02</div>
+          <div class="at-video-item-body">
+            <h3>错题本到底该怎么用：三类错题的整理路径</h3>
+            <p>把“整理错题”拆成分类、归因、复现三个动作，现场演示一份可持续的错题档案如何搭建，并给出不同学科的差异化模板。</p>
+            <div class="at-video-tags"><span class="at-tag">经验分享</span><span class="at-tag">实用技巧</span><span class="at-tag">学习方法</span></div>
+          </div>
+          <div class="at-video-item-meta">
+            <span>安安老师 · 播放 86,300</span>
+            <span>赞 6,140 / 藏 4,820</span>
+          </div>
+        </article>
+        <article class="at-video-item">
+          <div class="at-video-num">03</div>
+          <div class="at-video-item-body">
+            <h3>家长会不尴尬：一次十五分钟沟通的准备清单</h3>
+            <p>从会前信息整理、会中表达顺序到会后跟进，给出一份可直接套用的沟通清单，减少家校之间的信息错位。</p>
+            <div class="at-video-tags"><span class="at-tag">家校沟通</span><span class="at-tag">人物访谈</span></div>
+          </div>
+          <div class="at-video-item-meta">
+            <span>林老师 · 播放 61,700</span>
+            <span>赞 4,380 / 藏 3,905</span>
+          </div>
+        </article>
+        <article class="at-video-item">
+          <div class="at-video-num">04</div>
+          <div class="at-video-item-body">
+            <h3>一块板书的信息层级：从拥挤到清爽的七次修改</h3>
+            <p>用七版板书的修改过程，展示如何通过分区、字号与留白引导学生的视线，末尾附常见误区对照表。</p>
+            <div class="at-video-tags"><span class="at-tag">创作幕后</span><span class="at-tag">课堂方法</span><span class="at-tag">艺术美学</span></div>
+          </div>
+          <div class="at-video-item-meta">
+            <span>周叙白 · 播放 54,900</span>
+            <span>赞 3,870 / 藏 3,212</span>
+          </div>
+        </article>
+        <article class="at-video-item">
+          <div class="at-video-num">05</div>
+          <div class="at-video-item-body">
+            <h3>为什么孩子上课听懂、回家不会？三段追问找答案</h3>
+            <p>以三组真实作业为线索，讨论“听懂”与“会用”之间的落差，给出可以立刻在家庭场景中尝试的追问话术。</p>
+            <div class="at-video-tags"><span class="at-tag">亲子成长</span><span class="at-tag">情感故事</span></div>
+          </div>
+          <div class="at-video-item-meta">
+            <span>苏妈妈 · 播放 48,600</span>
+            <span>赞 3,560 / 藏 2,960</span>
+          </div>
+        </article>
+        <article class="at-video-item">
+          <div class="at-video-num">06</div>
+          <div class="at-video-item-body">
+            <h3>教师的第一年：那些没人提前告诉你的十二件小事</h3>
+            <p>六位教龄五年内的青年教师聚在一起，聊备课时间、办公室关系、第一次被质疑时的应对，语气真实不鸡汤。</p>
+            <div class="at-video-tags"><span class="at-tag">职场日常</span><span class="at-tag">人物访谈</span><span class="at-tag">成长</span></div>
+          </div>
+          <div class="at-video-item-meta">
+            <span>江晚 · 播放 43,250</span>
+            <span>赞 3,120 / 藏 2,744</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 M4 -->
+  <section class="at-section at-section-alt" id="at-topics" aria-labelledby="at-topics-title">
+    <div class="at-wrap">
+      <div class="at-sec-head">
+        <p class="at-kicker">Special Projects</p>
+        <h2 class="at-sec-title" id="at-topics-title">专题企划：安安老师记bilibili官网的长期栏目</h2>
+        <p class="at-sec-desc">四个正在更新的专题，覆盖课堂方法、家校沟通、教师成长与教育影像记录，欢迎持续追更。</p>
+      </div>
+      <div class="at-topic-grid">
+        <article class="at-topic-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23e8eef8'/%3E%3Crect x='0' y='270' width='800' height='130' fill='%23dfe8f6'/%3E%3Crect x='70' y='80' width='220' height='140' rx='10' fill='%23ffffff'/%3E%3Crect x='70' y='80' width='220' height='30' rx='10' fill='%23243b63'/%3E%3Crect x='90' y='132' width='140' height='9' rx='4' fill='%23a9b8d1'/%3E%3Crect x='90' y='152' width='110' height='9' rx='4' fill='%23c3cee0'/%3E%3Crect x='330' y='60' width='180' height='180' rx='12' fill='%23e8a83a' opacity='.9'/%3E%3Ccircle cx='420' cy='140' r='40' fill='%23ffffff'/%3E%3Cpath d='M408 126l26 14-26 14z' fill='%23243b63'/%3E%3Crect x='550' y='90' width='180' height='120' rx='10' fill='%233d6bb3' opacity='.8'/%3E%3Crect x='570' y='112' width='120' height='9' rx='4' fill='%23ffffff' opacity='.8'/%3E%3Crect x='570' y='132' width='90' height='9' rx='4' fill='%23ffffff' opacity='.5'/%3E%3Crect x='550' y='230' width='180' height='60' rx='10' fill='%23243b63' opacity='.85'/%3E%3C/svg%3E" alt="课堂方法专题封面，包含讲义卡片与播放窗口的排版示意">
+          <div class="at-topic-body">
+            <span class="at-topic-status at-st-live">更新中 · 第4期</span>
+            <h3>课堂方法实验室</h3>
+            <p>把一线教师的课堂经验转成可验证的小实验，一期一个具体问题，讲清楚怎么做、为什么有效。</p>
+            <ul class="at-topic-list">
+              <li>提问等待时间从1秒到5秒，学生的回答发生了什么变化</li>
+              <li>分组讨论低效的三个真实原因与改进方案</li>
+              <li>板书分区实验：同一节课的两种信息排布对照</li>
+            </ul>
+          </div>
+        </article>
+        <article class="at-topic-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23fdf3df'/%3E%3Ccircle cx='660' cy='90' r='110' fill='%23e8a83a' opacity='.28'/%3E%3Crect x='80' y='110' width='300' height='180' rx='14' fill='%23ffffff'/%3E%3Ccircle cx='130' cy='160' r='22' fill='%233d6bb3'/%3E%3Crect x='166' y='148' width='140' height='11' rx='5' fill='%23243b63' opacity='.8'/%3E%3Crect x='166' y='170' width='100' height='8' rx='4' fill='%23b6c3d8'/%3E%3Crect x='110' y='204' width='240' height='8' rx='4' fill='%23c9d4e4'/%3E%3Crect x='110' y='224' width='200' height='8' rx='4' fill='%23dbe3ee'/%3E%3Crect x='110' y='252' width='90' height='24' rx='12' fill='%23243b63' opacity='.75'/%3E%3Crect x='440' y='80' width='280' height='230' rx='14' fill='%23243b63'/%3E%3Crect x='470' y='112' width='160' height='12' rx='6' fill='%23ffffff' opacity='.8'/%3E%3Crect x='470' y='140' width='220' height='8' rx='4' fill='%23ffffff' opacity='.4'/%3E%3Crect x='470' y='160' width='190' height='8' rx='4' fill='%23ffffff' opacity='.3'/%3E%3Crect x='470' y='200' width='90' height='60' rx='8' fill='%23e8a83a'/%3E%3Crect x='576' y='200' width='114' height='60' rx='8' fill='%23ffffff' opacity='.18'/%3E%3C/svg%3E" alt="家校沟通专题封面，呈现家长与教师沟通卡片与对话窗口">
+          <div class="at-topic-body">
+            <span class="at-topic-status at-st-live">更新中 · 第3期</span>
+            <h3>家校沟通记事本</h3>
+            <p>以真实沟通场景为脚本，拆解表达顺序、情绪处理与边界意识，帮助双方把话说到点子上。</p>
+            <ul class="at-topic-list">
+              <li>接到家长质疑电话的前三句话该怎么说</li>
+              <li>一次失败的家长会复盘：问题出在信息顺序</li>
+              <li>如何向家长解释“这次成绩波动是正常的”</li>
+            </ul>
+          </div>
+        </article>
+        <article class="at-topic-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23243b63'/%3E%3Cpath d='M0 320 Q200 250 400 300 T800 280 V400 H0z' fill='%233d6bb3' opacity='.5'/%3E%3Ccircle cx='180' cy='120' r='64' fill='%23e8a83a' opacity='.85'/%3E%3Ccircle cx='180' cy='120' r='30' fill='%23243b63'/%3E%3Crect x='300' y='90' width='150' height='12' rx='6' fill='%23ffffff' opacity='.85'/%3E%3Crect x='300' y='116' width='220' height='8' rx='4' fill='%23ffffff' opacity='.4'/%3E%3Crect x='300' y='136' width='180' height='8' rx='4' fill='%23ffffff' opacity='.3'/%3E%3Crect x='300' y='176' width='90' height='26' rx='13' fill='%23ffffff' opacity='.2'/%3E%3Crect x='440' y='220' width='290' height='120' rx='12' fill='%23ffffff' opacity='.12'/%3E%3Crect x='464' y='244' width='120' height='9' rx='4' fill='%23ffffff' opacity='.7'/%3E%3Crect x='464' y='264' width='180' height='8' rx='4' fill='%23ffffff' opacity='.35'/%3E%3Crect x='464' y='292' width='80' height='24' rx='12' fill='%23e8a83a' opacity='.8'/%3E%3C/svg%3E" alt="教师成长专题封面，深蓝色背景中的讲者图形与成长路径示意">
+          <div class="at-topic-body">
+            <span class="at-topic-status at-st-soon">11月28日上线</span>
+            <h3>教师成长档案</h3>
+            <p>记录教龄1年到10年的教师如何度过关键节点，用访谈与影像留下职业成长的细节。</p>
+            <ul class="at-topic-list">
+              <li>第一年最想放弃的那个周五下午</li>
+              <li>从“做题讲题”到“设计学习任务”的转向</li>
+              <li>一位乡村教师在资源有限条件下的课堂创新</li>
+            </ul>
+          </div>
+        </article>
+        <article class="at-topic-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23eef3fb'/%3E%3Crect x='60' y='60' width='680' height='280' rx='16' fill='%23ffffff'/%3E%3Crect x='60' y='60' width='680' height='46' rx='16' fill='%23e8eef8'/%3E%3Ccircle cx='96' cy='83' r='7' fill='%23e8a83a'/%3E%3Ccircle cx='118' cy='83' r='7' fill='%233d6bb3'/%3E%3Ccircle cx='140' cy='83' r='7' fill='%23243b63'/%3E%3Crect x='90' y='136' width='170' height='170' rx='10' fill='%23dfe8f6'/%3E%3Ccircle cx='175' cy='204' r='30' fill='%23ffffff'/%3E%3Cpath d='M166 190l22 14-22 14z' fill='%23243b63'/%3E%3Crect x='290' y='136' width='200' height='12' rx='6' fill='%23243b63' opacity='.8'/%3E%3Crect x='290' y='164' width='300' height='8' rx='4' fill='%23b6c3d8'/%3E%3Crect x='290' y='184' width='260' height='8' rx='4' fill='%23cdd7e6'/%3E%3Crect x='290' y='214' width='120' height='9' rx='4' fill='%233d6bb3' opacity='.5'/%3E%3Crect x='290' y='244' width='330' height='62' rx='8' fill='%23fdf3df'/%3E%3Crect x='590' y='136' width='120' height='170' rx='10' fill='%23243b63'/%3E%3Crect x='608' y='158' width='84' height='8' rx='4' fill='%23ffffff' opacity='.6'/%3E%3Crect x='608' y='180' width='64' height='8' rx='4' fill='%23ffffff' opacity='.35'/%3E%3Crect x='608' y='220' width='84' height='60' rx='8' fill='%23e8a83a' opacity='.9'/%3E%3C/svg%3E" alt="教育影像记录专题封面，排版界面中包含视频窗口与侧栏信息">
+          <div class="at-topic-body">
+            <span class="at-topic-status at-st-live">更新中 · 第6期</span>
+            <h3>教育影像档案</h3>
+            <p>用纪录片式的镜头保存那些容易被忽略的教育瞬间，不加工情绪，只记录发生过的真实。</p>
+            <ul class="at-topic-list">
+              <li>早读前二十分钟：一个班级的安静秩序</li>
+              <li>毕业季的最后一节课，镜头没有打扰任何人</li>
+              <li>乡村小学的一天：从食堂到图书角的镜头记录</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 M5 -->
+  <section class="at-section" id="at-authors" aria-labelledby="at-authors-title">
+    <div class="at-wrap">
+      <div class="at-sec-head">
+        <p class="at-kicker">Creators</p>
+        <h2 class="at-sec-title" id="at-authors-title">创作者矩阵：构成安安老师记bilibili内容生态的人</h2>
+        <p class="at-sec-desc">六位长期合作的创作者，风格不同、视角互补。所有内容均经官方审核与授权发布。</p>
+      </div>
+      <div class="at-author-grid">
+        <article class="at-author-card">
+          <div class="at-avatar" style="background:linear-gradient(140deg,#243b63,#3d6bb3)">安</div>
+          <div class="at-author-body">
+            <h3>安安老师</h3>
+            <p class="at-author-field">课堂方法 · 教研设计</p>
+            <p>品牌发起人，教龄十四年。擅长把复杂的课堂策略拆成可执行的步骤，镜头里讲话偏慢、爱讲细节。她坚持每支正片都保留课堂原声，认为“真实的教学现场比完美表演更有参考价值”。</p>
+            <div class="at-author-nums"><span>作品 <b>326</b></span><span>粉丝 <b>18.2万</b></span></div>
+            <a class="at-author-more" href="#at-videos">查看代表作</a>
+          </div>
+        </article>
+        <article class="at-author-card">
+          <div class="at-avatar" style="background:linear-gradient(140deg,#e8a83a,#c9821f)">林</div>
+          <div class="at-author-body">
+            <h3>林老师</h3>
+            <p class="at-author-field">家校沟通 · 班主任工作</p>
+            <p>初三年级班主任，擅长处理高敏感度的沟通场景。她的视频常以真实对话为脚本，先讲情绪再谈方法。很多老师反馈，她的内容可以直接拿去做家长会前的预热材料，语气冷静但不冷漠。</p>
+            <div class="at-author-nums"><span>作品 <b>148</b></span><span>粉丝 <b>9.6万</b></span></div>
+            <a class="at-author-more" href="#at-videos">查看代表作</a>
+          </div>
+        </article>
+        <article class="at-author-card">
+          <div class="at-avatar" style="background:linear-gradient(140deg,#3d6bb3,#5b8ed6)">周</div>
+          <div class="at-author-body">
+            <h3>周叙白</h3>
+            <p class="at-author-field">板书设计 · 视觉表达</p>
+            <p>美术与语文跨科教师，专注于课堂视觉信息的排布。他的内容偏“技术流”，经常用七版板书对比说明信息层级的调整逻辑。剪辑节奏明快，适合边看边暂停做笔记。</p>
+            <div class="at-author-nums"><span>作品 <b>97</b></span><span>粉丝 <b>7.4万</b></span></div>
+            <a class="at-author-more" href="#at-videos">查看代表作</a>
+          </div>
+        </article>
+        <article class="at-author-card">
+          <div class="at-avatar" style="background:linear-gradient(140deg,#4f7d63,#2f5a44)">苏</div>
+          <div class="at-author-body">
+            <h3>苏妈妈</h3>
+            <p class="at-author-field">亲子沟通 · 家庭学习</p>
+            <p>两个孩子的母亲，也是社区里被引用最多的家长创作者。她的视频常用家庭日用场景开场，从一次作业冲突谈到沟通方式的调整。语言朴素，不给焦虑加码，这是她的基本原则。</p>
+            <div class="at-author-nums"><span>作品 <b>112</b></span><span>粉丝 <b>8.1万</b></span></div>
+            <a class="at-author-more" href="#at-videos">查看代表作</a>
+          </div>
+        </article>
+        <article class="at-author-card">
+          <div class="at-avatar" style="background:linear-gradient(140deg,#7b5aa6,#5a3d85)">江</div>
+          <div class="at-author-body">
+            <h3>江晚</h3>
+            <p class="at-author-field">教师成长 · 人物访谈</p>
+            <p>教龄六年，负责“教师成长档案”专题的访谈工作。她擅长把尖锐的问题问得温和，让受访者愿意说出真实的困境。她自己的视频里也常出现课堂失误的复盘，不回避脆弱。</p>
+            <div class="at-author-nums"><span>作品 <b>84</b></span><span>粉丝 <b>6.2万</b></span></div>
+            <a class="at-author-more" href="#at-videos">查看代表作</a>
+          </div>
+        </article>
+        <article class="at-author-card">
+          <div class="at-avatar" style="background:linear-gradient(140deg,#a5523f,#7d3628)">许</div>
+          <div class="at-author-body">
+            <h3>许一舟</h3>
+            <p class="at-author-field">教育影像 · 纪录片拍摄</p>
+            <p>自由纪录片导演，负责品牌“教育影像档案”的拍摄。他习惯长时间待在校园里等待一个自然发生的瞬间，反对摆拍式记录。他的画面质感偏克制，常被评价“像在看一扇没有推开的窗”。</p>
+            <div class="at-author-nums"><span>作品 <b>63</b></span><span>粉丝 <b>5.7万</b></span></div>
+            <a class="at-author-more" href="#at-videos">查看代表作</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 排行榜与评价 M14 / M8 -->
+  <section class="at-section at-section-alt" id="at-rank" aria-labelledby="at-rank-title">
+    <div class="at-wrap">
+      <div class="at-sec-head">
+        <p class="at-kicker">Ranking & Reviews</p>
+        <h2 class="at-sec-title" id="at-rank-title">榜单与口碑：安安老师记bilibili的用户首选理由</h2>
+        <p class="at-sec-desc">热度榜、新人榜与口碑榜每周更新一次，数据来自官网播放、收藏与社区评价的综合统计。</p>
+      </div>
+
+      <div class="at-rank-grid" style="margin-bottom:34px">
+        <div class="at-rank-col">
+          <h3><span class="at-rank-dot"></span>本周热度榜</h3>
+          <div class="at-rank-item">
+            <span class="at-rank-no">1</span>
+            <div class="at-rank-info"><h4>课堂节奏设计十二讲 · 第一讲</h4><p>播放 12.8万 · 收藏 6,512</p></div>
+          </div>
+          <div class="at-rank-item">
+            <span class="at-rank-no">2</span>
+            <div class="at-rank-info"><h4>错题本到底该怎么用</h4><p>播放 8.6万 · 收藏 4,820</p></div>
+          </div>
+          <div class="at-rank-item">
+            <span class="at-rank-no">3</span>
+            <div class="at-rank-info"><h4>家长会不尴尬的准备清单</h4><p>播放 6.2万 · 收藏 3,905</p></div>
+          </div>
+          <div class="at-rank-item">
+            <span class="at-rank-no">4</span>
+            <div class="at-rank-info"><h4>一块板书的信息层级</h4><p>播放 5.5万 · 收藏 3,212</p></div>
+          </div>
+        </div>
+        <div class="at-rank-col">
+          <h3><span class="at-rank-dot"></span>新人榜</h3>
+          <div class="at-rank-item">
+            <span class="at-rank-no">1</span>
+            <div class="at-rank-info"><h4>许一舟 · 教育影像档案</h4><p>本月新增作品 6 支</p></div>
+          </div>
+          <div class="at-rank-item">
+            <span class="at-rank-no">2</span>
+            <div class="at-rank-info"><h4>江晚 · 教师成长档案</h4><p>本月新增作品 5 支</p></div>
+          </div>
+          <div class="at-rank-item">
+            <span class="at-rank-no">3</span>
+            <div class="at-rank-info"><h4>苏妈妈 · 家庭学习手记</h4><p>本月新增作品 4 支</p></div>
+          </div>
+          <div class="at-rank-item">
+            <span class="at-rank-no">4</span>
+            <div class="at-rank-info"><h4>周叙白 · 板书实验室</h4><p>本月新增作品 4 支</p></div>
+          </div>
+        </div>
+        <div class="at-rank-col">
+          <h3><span class="at-rank-dot"></span>口碑榜</h3>
+          <div class="at-rank-item">
+            <span class="at-rank-no">1</span>
+            <div class="at-rank-info"><h4>课堂方法实验室</h4><p>评分 4.96 · 好评率 97%</p></div>
+          </div>
+          <div class="at-rank-item">
+            <span class="at-rank-no">2</span>
+            <div class="at-rank-info"><h4>家校沟通记事本</h4><p>评分 4.93 · 好评率 96%</p></div>
+          </div>
+          <div class="at-rank-item">
+            <span class="at-rank-no">3</span>
+            <div class="at-rank-info"><h4>教师成长档案</h4><p>评分 4.91 · 好评率 95%</p></div>
+          </div>
+          <div class="at-rank-item">
+            <span class="at-rank-no">4</span>
+            <div class="at-rank-info"><h4>教育影像档案</h4><p>评分 4.88 · 好评率 94%</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="at-review-summary">
+        <div class="at-score-big">
+          <b>4.9</b>
+          <span>社区综合评分</span>
+          <div class="at-stars">★★★★★</div>
+        </div>
+        <div class="at-score-bars">
+          <div class="at-score-row"><span>内容质量</span><div class="at-bar"><i style="width:98%"></i></div><span>4.9</span></div>
+          <div class="at-score-row"><span>实用程度</span><div class="at-bar"><i style="width:96%"></i></div><span>4.8</span></div>
+          <div class="at-score-row"><span>画面制作</span><div class="at-bar"><i style="width:94%"></i></div><span>4.7</span></div>
+          <div class="at-score-row"><span>社区氛围</span><div class="at-bar"><i style="width:97%"></i></div><span>4.9</span></div>
+        </div>
+      </div>
+
+      <div class="at-review-grid">
+        <article class="at-review-card">
+          <div class="at-review-head">
+            <span class="at-review-avatar" style="background:#3d6bb3">陈</span>
+            <span class="at-review-name">陈老师 · 小学语文</span>
+            <span class="at-review-stars">★★★★★</span>
+          </div>
+          <p>看了提问等待时间那一期，第二天就在课堂上试了。原来多等三秒真的会不一样，后排那个从来不举手的孩子居然开口了。这种能直接用的内容，比讲一堆理论有说服力。</p>
+          <p class="at-review-date">2026年11月18日</p>
+        </article>
+        <article class="at-review-card">
+          <div class="at-review-head">
+            <span class="at-review-avatar" style="background:#e8a83a">吴</span>
+            <span class="at-review-name">吴爸爸 · 初二家长</span>
+            <span class="at-review-stars">★★★★★</span>
+          </div>
+          <p>作为家长，最怕看那种贩卖焦虑的内容。这里比较难得，讲问题也讲边界，没有把家长架在火上烤。错题本那期我照着做了两周，孩子没那么抵触了，虽然还没完全养成习惯。</p>
+          <p class="at-review-date">2026年11月12日</p>
+        </article>
+        <article class="at-review-card">
+          <div class="at-review-head">
+            <span class="at-review-avatar" style="background:#4f7d63">许</span>
+            <span class="at-review-name">许同学 · 师范生</span>
+            <span class="at-review-stars">★★★★☆</span>
+          </div>
+          <p>实习前把教师成长档案整个刷了一遍，很多细节是学校里不会教的，比如怎么处理办公室关系、第一次被家长质疑怎么办。画面不算精致，但访谈很真诚。希望以后能多一些乡村学校的记录。</p>
+          <p class="at-review-date">2026年11月9日</p>
+        </article>
+        <article class="at-review-card">
+          <div class="at-review-head">
+            <span class="at-review-avatar" style="background:#7b5aa6">李</span>
+            <span class="at-review-name">李教研员 · 区教研室</span>
+            <span class="at-review-stars">★★★★★</span>
+          </div>
+          <p>我们区里做教研培训时，引用了课堂节奏设计十二讲里的时间分配框架。老师们反馈比纯理论讲座更容易落地。建议后续能把配套讲义做得再细一点，最好有可编辑版本。</p>
+          <p class="at-review-date">2026年11月5日</p>
+        </article>
+        <article class="at-review-card">
+          <div class="at-review-head">
+            <span class="at-review-avatar" style="background:#a5523f">郑</span>
+            <span class="at-review-name">郑老师 · 高中物理</span>
+            <span class="at-review-stars">★★★★☆</span>
+          </div>
+          <p>板书那期对我启发很大，尤其是信息分区的思路。不过物理学科符号多，直接套用有点困难，希望周老师能做一期理科版的板书专题。整体来说，这个品牌在垂直领域算比较专业的。</p>
+          <p class="at-review-date">2026年10月30日</p>
+        </article>
+        <article class="at-review-card">
+          <div class="at-review-head">
+            <span class="at-review-avatar" style="background:#243b63">何</span>
+            <span class="at-review-name">何女士 · 社区志愿者</span>
+            <span class="at-review-stars">★★★★★</span>
+          </div>
+          <p>我是做社区亲子活动的，经常拿这里的沟通清单当参考资料。内容不端着，也不故作高深。每次看评论区都觉得这个社区挺健康的，讨论问题而不是互相指责，这一点很难得。</p>
+          <p class="at-review-date">2026年10月26日</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M10 企业动态 + M11 合作品牌 -->
+  <section class="at-section" id="at-news" aria-labelledby="at-news-title">
+    <div class="at-wrap">
+      <div class="at-sec-head">
+        <p class="at-kicker">News & Partners</p>
+        <h2 class="at-sec-title" id="at-news-title">企业动态与合作伙伴：安安老师记bilibili官方发布</h2>
+        <p class="at-sec-desc">品牌资讯、内容更新与合作进展，按发布时间排列。所有公告以官网发布为准。</p>
+      </div>
+
+      <div class="at-news-list" style="margin-bottom:36px">
+        <div class="at-news-item">
+          <span class="at-news-date">2026-11-20</span>
+          <div>
+            <h3>《课堂节奏设计十二讲》冬季新课官宣，11月25日首播</h3>
+            <p>共十二支正片，首批上线六支，同步开放配套讲义下载。首播当晚将举行一场线上教研答疑，报名入口在帮助中心。</p>
+          </div>
+        </div>
+        <div class="at-news-item">
+          <span class="at-news-date">2026-11-14</span>
+          <div>
+            <h3>创作者扶持计划第三期启动，新增二十个官网推荐位</h3>
+            <p>本期向一线教师、家长创作者与教育影像作者开放，入选者将获得拍摄协助、剪辑支持与官网首页推荐资源。</p>
+          </div>
+        </div>
+        <div class="at-news-item">
+          <span class="at-news-date">2026-11-03</span>
+          <div>
+            <h3>品牌年度内容报告公开，全年原创正片突破两百支</h3>
+            <p>报告涵盖内容结构、用户画像与社区治理数据，已在官网下载中心开放。我们欢迎同行与用户提出批评与建议。</p>
+          </div>
+        </div>
+        <div class="at-news-item">
+          <span class="at-news-date">2026-10-22</span>
+          <div>
+            <h3>与三家区域教研室达成教研合作，共建课堂案例库</h3>
+            <p>合作将以真实课堂录像为素材，形成可检索的区域教研资源，首批案例预计在明年初向社区开放部分内容。</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom:16px;font-size:18px">合作品牌与机构</h3>
+      <div class="at-partner-grid">
+        <div class="at-partner">
+          <div class="at-partner-mark" style="background:#243b63">研</div>
+          <b>明理教研所</b>
+          <span>课堂案例共建</span>
+        </div>
+        <div class="at-partner">
+          <div class="at-partner-mark" style="background:#3d6bb3">书</div>
+          <b>青禾书局</b>
+          <span>教育图书联名</span>
+        </div>
+        <div class="at-partner">
+          <div class="at-partner-mark" style="background:#e8a83a">影</div>
+          <b>拾光影像社</b>
+          <span>纪录片联合制作</span>
+        </div>
+        <div class="at-partner">
+          <div class="at-partner-mark" style="background:#4f7d63">社</div>
+          <b>邻里社区中心</b>
+          <span>亲子活动合作</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 辅助区：FAQ -->
+  <section class="at-section at-section-alt" id="at-faq" aria-labelledby="at-faq-title">
+    <div class="at-wrap">
+      <div class="at-sec-head">
+        <p class="at-kicker">Help Center</p>
+        <h2 class="at-sec-title" id="at-faq-title">帮助中心：关于安安老师记bilibili官网的常见问题</h2>
+        <p class="at-sec-desc">内容授权、投稿流程、下载与社区规范，集中在这里解答。若仍有疑问，可通过页面底部的投稿与联系入口反馈。</p>
+      </div>
+      <div class="at-faq-list">
+        <details class="at-faq-item">
+          <summary>官网的视频可以用于校内教研或教师培训吗？</summary>
+          <p>可以。非商业性的校内教研、教师培训与家长学校场景，在保留片头与来源说明的前提下可免费使用。如需批量使用或剪辑进培训材料，请通过投稿与联系入口提交申请，我们会在三个工作日内回复。</p>
+        </details>
+        <details class="at-faq-item">
+          <summary>配套讲义和课堂观察表在哪里下载？</summary>
+          <p>每支正片的详情页都设有资料区，讲义、观察表与课件模板以高清版本提供下载。部分资料需要登录社区账号后获取，目的是便于后续更新通知与版本管理。</p>
+        </details>
+        <details class="at-faq-item">
+          <summary>我想投稿，作品需要满足哪些基本要求？</summary>
+          <p>我们欢迎一线教师、家长与教育影像创作者投稿。基本要求包括：内容真实、不侵犯他人肖像与隐私、画面清晰可辨、音轨无明显杂音。投稿时请附上简要说明与素材授权情况，编辑部会在一周内给出反馈。</p>
+        </details>
+        <details class="at-faq-item">
+          <summary>为什么有些视频只在官网发布，没有同步到其他平台？</summary>
+          <p>部分涉及学生出镜或教研合作的内容，基于授权范围与隐私保护考虑，仅在官网以受控方式发布。这也是我们坚持正版与合规运营的一部分，感谢理解。</p>
+        </details>
+        <details class="at-faq-item">
+          <summary>社区评论有什么规范？被误判了怎么办？</summary>
+          <p>我们鼓励具体的讨论与善意的批评，不欢迎人身攻击、广告导流与未经证实的指控。若你认为评论被误判，可通过反馈入口提交说明，人工复核会在两个工作日内完成。</p>
+        </details>
+        <details class="at-faq-item">
+          <summary>品牌是否接受商业合作？合作方向有哪些？</summary>
+          <p>我们接受与教育内容品质相符的合作，包括教研机构共建案例库、出版社联名资料、公益教育项目与纪录片联合制作。不接受与品牌调性明显冲突的推广形式，具体可提交合作意向书。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- M13 联系投稿 -->
+  <section class="at-section" aria-labelledby="at-contact-title">
+    <div class="at-wrap">
+      <div class="at-contact-band">
+        <div>
+          <h2 id="at-contact-title">把你的课堂，变成社区里的一束光</h2>
+          <p>安安老师记bilibili持续开放投稿通道。无论是一节完整的课堂实录、一次失败的教学复盘，还是一段校园里的安静影像，都欢迎提交。我们会认真看完每一份投稿。</p>
+        </div>
+        <div class="at-contact-cta">
+          <button class="at-btn-light" id="at-submit-open-2" type="button">提交投稿</button>
+          <button class="at-btn-outline" id="at-share-open-2" type="button">分享给同行</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 S8 -->
+<footer class="at-footer">
+  <div class="at-wrap">
+    <div class="at-footer-grid">
+      <div class="at-footer-brand">
+        <div class="at-logo" style="margin-bottom:4px">
+          <span class="at-logo-mark">安</span>
+          <span class="at-logo-text">
+            <span class="at-logo-name">安安老师记bilibili</span>
+            <span class="at-logo-sub">OFFICIAL VIDEO</span>
+          </span>
+        </div>
+        <p>安安老师记bilibili官方网站 · 教育视频品牌门户。我们坚持原创正版、高清专业、持续运营，以真实课堂记录与教研分享服务教师、家长与终身学习者。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#at-videos">精品内容</a></li>
+          <li><a href="#at-topics">专题企划</a></li>
+          <li><a href="#at-authors">创作者矩阵</a></li>
+          <li><a href="#at-rank">榜单与口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#at-about">品牌解析</a></li>
+          <li><a href="#at-news">企业动态</a></li>
+          <li><a href="#at-faq">帮助中心</a></li>
+          <li><a href="#" data-copy-btn>复制官网链接</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#" id="at-submit-open-3">投稿入口</a></li>
+          <li><a href="#" data-open-modal="at-modal-report">反馈建议</a></li>
+          <li><a href="#at-news">合作洽谈</a></li>
+          <li><a href="#at-faq">社区规范</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-footer-bottom">
+      <span>© 2026 安安老师记bilibili 官方网站 · 版权所有 · 持续运营中</span>
+      <span>备案号：教网备 2026-1147 号 · 内容均经授权发布</span>
+    </div>
+  </div>
+</footer>
+
+<button class="at-top-btn" id="at-top-btn" type="button" aria-label="回到顶部">↑</button>
+<div class="at-toast" id="at-toast" role="status" aria-live="polite"></div>
+
+<!-- 投稿弹窗 -->
+<div class="at-modal-mask" id="at-modal-submit" aria-hidden="true">
+  <div class="at-modal" role="dialog" aria-modal="true" aria-labelledby="at-submit-title">
+    <button class="at-modal-close" data-close-modal type="button" aria-label="关闭">✕</button>
+    <h3 id="at-submit-title">提交投稿</h3>
+    <p>填写基础信息即可提交，编辑部会在一周内给出反馈。请确保素材已获得出镜者授权。</p>
+    <form id="at-submit-form">
+      <div class="at-form-row">
+        <label for="at-f-name">称呼</label>
+        <input id="at-f-name" type="text" placeholder="如：陈老师" required>
+      </div>
+      <div class="at-form-row">
+        <label for="at-f-title">作品标题</label>
+        <input id="at-f-title" type="text" placeholder="一句话概括你的内容" required>
+      </div>
+      <div class="at-form-row">
+        <label for="at-f-desc">内容简介</label>
+        <textarea id="at-f-desc" placeholder="讲讲这支视频想解决什么问题、拍摄时遇到了什么"></textarea>
+      </div>
+      <button class="at-btn-primary" type="submit" style="width:100%;padding:11px">提交</button>
+    </form>
+  </div>
+</div>
+
+<!-- 分享弹窗 -->
+<div class="at-modal-mask" id="at-modal-share" aria-hidden="true">
+  <div class="at-modal" role="dialog" aria-modal="true" aria-labelledby="at-share-title">
+    <button class="at-modal-close" data-close-modal type="button" aria-label="关闭">✕</button>
+    <h3 id="at-share-title">分享安安老师记bilibili官网</h3>
+    <p>选择一种方式把官网分享给同行与家长。</p>
+    <div class="at-share-row">
+      <button class="at-share-chip" data-share-target="微信" type="button">微信</button>
+      <button class="at-share-chip" data-share-target="微博" type="button">微博</button>
+      <button class="at-share-chip" data-share-target="QQ" type="button">QQ</button>
+      <button class="at-share-chip" data-copy-btn type="button">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<!-- 反馈弹窗 -->
+<div class="at-modal-mask" id="at-modal-report" aria-hidden="true">
+  <div class="at-modal" role="dialog" aria-modal="true" aria-labelledby="at-report-title">
+    <button class="at-modal-close" data-close-modal type="button" aria-label="关闭">✕</button>
+    <h3 id="at-report-title">反馈与建议</h3>
+    <p>内容纠错、播放异常或社区规范问题，都可以告诉我们。</p>
+    <div class="at-form-row">
+      <label for="at-f-report">问题描述</label>
+      <textarea id="at-f-report" placeholder="请描述你遇到的问题或建议"></textarea>
+    </div>
+    <button class="at-btn-primary" id="at-report-send" type="button" style="width:100%;padding:11px">发送反馈</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('at-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    if(toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove('is-show');
+    }, 2300);
+  }
+
+  function copyLink(){
+    var link = '安安老师记bilibili 官方网站 · 教育视频品牌门户';
+    function done(){
+      showToast('官网链接已复制，可分享给同行');
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(done).catch(function(){
+        fallbackCopy(link, done);
+      });
+    }else{
+      fallbackCopy(link, done);
+    }
+  }
+  function fallbackCopy(text, cb){
+    try{
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly','');
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      cb();
+    }catch(e){
+      showToast('复制失败，请手动选择文本复制');
+    }
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('at-burger');
+  var mobileNav = document.getElementById('at-mobile-nav');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      var open = mobileNav.classList.toggle('is-open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        mobileNav.classList.remove('is-open');
+        burger.classList.remove('is-open');
+        burger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('at-search-input');
+  var searchBtn = document.getElementById('at-search-btn');
+  var searchFeedback = document.getElementById('at-search-feedback');
+  var searchMap = [
+    {keys:['课堂','节奏','教学','方法'], tip:'找到 12 支课堂方法相关视频，推荐从《课堂节奏设计十二讲》开始'},
+    {keys:['家校','家长','沟通','班主任'], tip:'找到 8 支家校沟通内容，林老师的《家长会不尴尬》口碑较高'},
+    {keys:['板书','视觉','板书设计'], tip:'找到 6 支板书设计视频，周叙白的七版修改对照值得一看'},
+    {keys:['错题','作业','学习','复习'], tip:'找到 9 支学习方法内容，其中《错题本到底该怎么用》收藏量领先'},
+    {keys:['教师','成长','新手','访谈'], tip:'找到 11 支教师成长类内容，教师成长档案专题正在更新中'},
+    {keys:['作者','创作者','安安'], tip:'创作者矩阵共 6 位长期合作作者，可在创作者板块查看简介'},
+    {keys:['投稿','上传','报名'], tip:'投稿通道持续开放，点击页头“我要投稿”即可提交'}
+  ];
+  function runSearch(){
+    if(!searchInput || !searchFeedback) return;
+    var q = searchInput.value.trim();
+    if(!q){
+      searchFeedback.classList.remove('is-visible');
+      showToast('请输入关键词后再搜索');
+      return;
+    }
+    var hit = null;
+    for(var i=0;i<searchMap.length;i++){
+      var item = searchMap[i];
+      for(var j=0;j<item.keys.length;j++){
+        if(q.indexOf(item.keys[j]) !== -1){
+          hit = item; break;
+        }
+      }
+      if(hit) break;
+    }
+    searchFeedback.textContent = hit ? hit.tip : '未找到完全匹配的内容，试着搜索“课堂”“沟通”“板书”或“投稿”';
+    searchFeedback.classList.add('is-visible');
+  }
+  if(searchBtn) searchBtn.addEventListener('click', runSearch);
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+    });
+    searchInput.addEventListener('input', function(){
+      if(!searchInput.value.trim() && searchFeedback){
+        searchFeedback.classList.remove('is-visible');
+      }
+    });
+  }
+
+  /* 点赞 */
+  document.querySelectorAll('[data-like-btn]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var targetId = btn.getAttribute('data-like-target');
+      var target = targetId ? document.getElementById(targetId) : null;
+      var liked = btn.classList.toggle('is-liked');
+      if(target){
+        var num = parseInt(target.textContent.replace(/,/g,''), 10) || 0;
+        num = liked ? num + 1 : num - 1;
+        target.textContent = num.toLocaleString('en-US');
+      }
+      btn.textContent = liked ? '已点赞' : '点赞';
+      showToast(liked ? '已点赞，感谢支持原创内容' : '已取消点赞');
+    });
+  });
+
+  /* 收藏 */
+  document.querySelectorAll('[data-save-btn]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('is-saved');
+      btn.textContent = saved ? '已收藏' : '收藏';
+      showToast(saved ? '已收藏到个人片单' : '已取消收藏');
+    });
+  });
+
+  /* 复制链接 */
+  document.querySelectorAll('[data-copy-btn]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      copyLink();
+    });
+  });
+
+  /* 弹窗通用 */
+  function openModal(id){
+    var m = document.getElementById(id);
+    if(!m) return;
+    m.classList.add('is-open');
+    m.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModals(){
+    document.querySelectorAll('.at-modal-mask.is-open').forEach(function(m){
+      m.classList.remove('is-open');
+      m.setAttribute('aria-hidden','true');
+    });
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('[data-open-modal]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      openModal(btn.getAttribute('data-open-modal'));
+    });
+  });
+  document.querySelectorAll('[data-close-modal]').forEach(function(btn){
+    btn.addEventListener('click', closeModals);
+  });
+  document.querySelectorAll('.at-modal-mask').forEach(function(mask){
+    mask.addEventListener('click', function(e){
+      if(e.target === mask) closeModals();
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModals();
+  });
+
+  /* 投稿入口 */
+  ['at-submit-open','at-submit-open-2','at-submit-open-3'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        openModal('at-modal-submit');
+      });
+    }
+  });
+
+  /* 分享入口 */
+  ['at-share-open','at-share-open-2'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        openModal('at-modal-share');
+      });
+    }
+  });
+
+  /* 投稿表单 */
+  var submitForm = document.getElementById('at-submit-form');
+  if(submitForm){
+    submitForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      closeModals();
+      submitForm.reset();
+      showToast('投稿已提交，编辑部将在一周内反馈');
+    });
+  }
+
+  /* 分享方式 */
+  document.querySelectorAll('[data-share-target]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = btn.getAttribute('data-share-target');
+      if(target === 'QQ'){
+        showToast('已生成 QQ 分享卡片，可粘贴到会话中');
+      }else{
+        showToast('已准备好' + target + '分享内容');
+      }
+    });
+  });
+
+  /* 反馈发送 */
+  var reportSend = document.getElementById('at-report-send');
+  if(reportSend){
+    reportSend.addEventListener('click', function(){
+      var ta = document.getElementById('at-f-report');
+      if(ta && !ta.value.trim()){
+        showToast('请先填写问题描述');
+        return;
+      }
+      if(ta) ta.value = '';
+      closeModals();
+      showToast('反馈已发送，感谢你的建议');
+    });
+  }
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('at-top-btn');
+  if(topBtn){
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 420){
+        topBtn.classList.add('is-show');
+      }else{
+        topBtn.classList.remove('is-show');
+      }
+    }, {passive:true});
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+})();
+</script>
+</body>
+  </html>
